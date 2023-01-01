@@ -1,0 +1,47 @@
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:wght@200&display=swap" rel="stylesheet">
+
+<div *ngIf="inp_val.length>0">
+  <mat-card>
+    <mat-card-title style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Reminders Ahead</mat-card-title>
+    <mat-accordion multi="true">
+      <mat-expansion-panel *ngFor="let item of inp_val">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{item.date}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{item.time}}
+          </mat-panel-description>
+      </mat-expansion-panel-header>
+        <p class="inp">Desrciption : <span>{{item.description}}</span> </p><br>
+        <p class="inp">Link : <span>{{item.link}}</span></p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card>
+
+</div>
+<p  *ngIf="inp_val.length==0">Not Available</p>
+
+<!-- <table>
+  <th>Time</th>
+  <th>Date</th>
+  <th>link</th>
+  <th>Description</th>
+  <tr *ngFor="let item of inp_val" (click)="ongotolink()">
+    <td>
+      {{item.time}}
+    </td>
+    <td>
+      {{item.date}}
+    </td>
+    <td>
+      {{item.link}}
+    </td>
+    <td>
+      {{item.description}}
+    </td>
+  </tr>
+</table> -->

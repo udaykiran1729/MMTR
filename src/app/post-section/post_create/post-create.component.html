@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>Scheduler</mat-card-title>
+
+  <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input width="50%" height="60%" rows="5" matInput type="text" [(ngModel)]="new1">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Link</mat-label>
+  <input type="text" width="50%" height="60%" cols="10" matInput [(ngModel)]="new2">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input matInput mat-calendar-body type="date" [(ngModel)]="dat">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Time-24 hr</mat-label>
+    <input matInput type="time" placeholder="24-Hour format" [(ngModel)]="time">
+  </mat-form-field>
+
+
+
+  <br>
+  <button mat-raised-button color="primary" (click)="onclimck()" type="submit" width="50%" #sub>Set</button>
+
+</mat-card>
+
+<p #write></p>

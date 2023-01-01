@@ -1,0 +1,45 @@
+/* table{
+  margin: auto;
+  font-family: 'Arimo', sans-serif;
+  width: 50%;
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th{
+  border: 2px solid black;
+  font-weight: bold;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 15px;
+}
+td{
+  text-align: center;
+  border: 2px solid black;
+  padding: 15px;
+} */
+
+mat-card{
+  padding: 10px;
+}
+
+div{
+  width: 50%;
+  margin:10px auto;
+}
+
+mat-panel-title,mat-panel-description{
+  font-family: 'Arimo',sans-serif;
+  font-size: 15px;
+}
+p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  padding: 5px;
+}
+.inp{
+  text-align: left;
+  font-family: 'Verdana',sans-serif;
+}
+mat-accordian{
+  padding: 10px;
+}
