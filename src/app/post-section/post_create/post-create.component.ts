@@ -1,5 +1,5 @@
 import { Component, Output ,EventEmitter} from "@angular/core";
-import { from } from "rxjs";
+import {Database,set,ref,update} from '@angular/fire/database';
 
 @Component({
   selector:'app-post-create',
@@ -9,6 +9,10 @@ import { from } from "rxjs";
 
 
 export class PostCreateComponent{
+  title='MMTR';
+  constructor(public database:Database){
+  }
+  user='user123/sche1'
   new1='';
   new2='';
   dat='';
@@ -27,6 +31,14 @@ export class PostCreateComponent{
         link:this.new2,
         description:this.new1
       }
+      set(ref(this.database,'users/'+ this.user),
+      {
+        time:this.time,
+        date:this.dat,
+        link:this.new2,
+        description:this.new1
+      });
+      alert('Remainder Updated');
       this.post.emit(m);
     }
   }

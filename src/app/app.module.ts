@@ -14,6 +14,7 @@ import { postList } from './post-section/post_list/post-list.component';
 //user defined
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AngularFireModule} from '@angular/fire/compat';
 
 //for inputmodule
 import {MatInputModule} from '@angular/material/input';
@@ -24,6 +25,15 @@ import {MatToolbarModule} from '@angular/material/toolbar'
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTableModule} from '@angular/material/table';
 
+//fire base requirements
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideFunctions,getFunctions } from '@angular/fire/functions';
+
 //for firebase
 
 @NgModule({
@@ -31,7 +41,7 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     PostCreateComponent,
     Header,
-    postList
+    postList,
   ],
   imports: [
     BrowserModule,
@@ -44,9 +54,18 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatDatepickerModule,
     MatExpansionModule,
-    MatTableModule
+    MatTableModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    provideFunctions(() => getFunctions())
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

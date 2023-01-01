@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mmtr-4de00": {
+      "hosting": {
+        "mmtr": [
+          "mmtr6177"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mmtr-4de00"
+  }
+}
