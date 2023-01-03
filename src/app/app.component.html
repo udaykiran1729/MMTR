@@ -1,10 +1,11 @@
 <app-header></app-header>
 <main>
   <div class="create">
-    <app-post-create (post)="onupdate($event)"></app-post-create>
+    <app-post-create></app-post-create>
   </div>
 
   <div class="list">
-    <app-post-list [inp_val]="posts"></app-post-list>
+    <!-- <app-post-list [inp_val]="posts"></app-post-list> -->
+    <app-post-list></app-post-list>
   </div>
 </main>
