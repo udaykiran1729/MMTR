@@ -1,0 +1,18 @@
+<div id="header">
+  <mat-toolbar color="primary">
+    <span>
+      <a routerLink="/Home" style="text-decoration: none;color: white;">MMTR</a>
+    </span>
+    <div id="list">
+    <ul>
+      <li matTextPrefix> <button mat-button routerLink="/Home">Home</button> </li>
+      <li matTextPrefix> <button mat-button routerLink="/Remainders">Your Remainders</button> </li>
+      <li matTextPrefix> <button mat-button routerLink="/About">About MMTR</button> </li>
+    </ul>
+    </div>
+    <button mat-button class="btn" style="float: right;" (click)="signOut()">Sign Out</button>
+  </mat-toolbar>
+  <div class="container">
+
+  </div>
+</div>

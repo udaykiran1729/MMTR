@@ -1,0 +1,22 @@
+<div id="me">
+<mat-card>
+  <mat-card-title>Log In</mat-card-title>
+  <mat-form-field>
+    <mat-label>email</mat-label>
+    <input width="50%" height="60%" matInput type="text" required [(ngModel)]="userid">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" required [(ngModel)]="password">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="login()">Log In</button>
+  <br>
+  <button mat-button color="white" style="color:blue" (click)="forgot()">Forgot password</button>
+
+  <p>Don't have an account<b><a routerLink="Register" style="text-decoration: none;color: black;"> Sign up </a></b> here</p>
+  <br>
+  <p>For more information <a routerLink="/About" style="text-decoration: none;color: black;"><b>click here</b></a></p>
+</mat-card>
+</div>
+

@@ -2,15 +2,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Nunito:wght@200&display=swap" rel="stylesheet">
+<app-header></app-header>
+
 
 <div *ngIf="inp_val.length>0">
   <mat-card>
     <mat-card-title style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Reminders Ahead</mat-card-title>
+    <button class="reload-button" (click)="refresh()">
+      <mat-icon color="primary">refresh</mat-icon>
+    </button>
     <mat-accordion multi="true">
       <mat-expansion-panel *ngFor="let item of inp_val">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            {{item.date}}
+            {{item.date}},{{item.key}}
           </mat-panel-title>
           <mat-panel-description>
             {{item.time}}
@@ -18,30 +23,15 @@
       </mat-expansion-panel-header>
         <p class="inp">Desrciption : <span>{{item.description}}</span> </p><br>
         <a href="{{item.link}}" style="text-decoration: none;"><p class="inp">Link : <span>{{item.link}}</span></p></a>
+        <button mat-button style="float: right;background-color: rgba(255, 0, 0, 0.732);" (click)="deleteItem(item)">Delete</button>
+        <button mat-raised-button style="float: right;margin-right: 20px;" (click)="updateItem(item)" routerLink="/Edit" data-target="#dialogRef">Update</button>
       </mat-expansion-panel>
     </mat-accordion>
   </mat-card>
 
 </div>
-<p  *ngIf="inp_val.length==0">Not Available</p>
 
-<!-- <table>
-  <th>Time</th>
-  <th>Date</th>
-  <th>link</th>
-  <th>Description</th>
-  <tr *ngFor="let item of inp_val" (click)="ongotolink()">
-    <td>
-      {{item.time}}
-    </td>
-    <td>
-      {{item.date}}
-    </td>
-    <td>
-      {{item.link}}
-    </td>
-    <td>
-      {{item.description}}
-    </td>
-  </tr>
-</table> -->
+
+
+<p  *ngIf="inp_val.length==0">Not Available</p>
+<!-- <p>{{userid}} </p> -->

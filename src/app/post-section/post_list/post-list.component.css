@@ -18,6 +18,26 @@ td{
   padding: 15px;
 } */
 
+.reload-button {
+  /* position: fixed; */
+  top: 40px;
+  right: 20px;
+  padding: 2px;
+  float: right;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.reload-button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.275);
+  transition: 0.5s;
+}
+
+
 mat-card{
   padding: 10px;
 }
@@ -43,3 +63,9 @@ p{
 mat-accordian{
   padding: 10px;
 }
+
+mat-card{
+  min-height: 50%;
+}
+
+

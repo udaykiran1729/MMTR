@@ -1,0 +1,38 @@
+mat-card-title{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+mat-card{
+  padding: 30px;
+  width: 50%;
+  margin: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#body{
+  margin-top: 50px;
+}
+
+.container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+button{
+  color: white;
+  font-weight: bold;
+}

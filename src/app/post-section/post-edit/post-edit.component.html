@@ -1,6 +1,5 @@
-<app-header></app-header>
 <mat-card>
-  <mat-card-title>Scheduler</mat-card-title>
+  <mat-card-title>Edit Schedule</mat-card-title>
 
   <mat-form-field appearance="fill">
       <mat-label>Description</mat-label>
@@ -21,12 +20,10 @@
     <mat-label>Time-24 hr</mat-label>
     <input matInput type="time" placeholder="24-Hour format" [(ngModel)]="time" required>
   </mat-form-field>
-
-
-
   <br>
-  <button mat-raised-button color="primary" (click)="onclimck()" type="submit" width="50%" #sub>Set</button>
-
 </mat-card>
-
+<div id="buttons">
+  <button mat-button color="primary" (click)="update()"  style="float: right;" id="update">Update</button>
+  <button mat-button color="red" (click)="cancel()"   style="float: right;margin-right: 20px;" id="cancel">Cancel</button>
+</div>
 <!-- <p #write>{{userid}} jhdafiaksjbd</p> -->
